@@ -32,7 +32,7 @@ export const expenseController: ExpenseController = {
     try {
       const { amount, description, accountId, categoryId, userId } = req.body;
 
-      const account = await accountService.getAccountById(Number(accountId)); // Adjust based on your entity methods
+      const account = await accountService.getAccountById(Number(accountId));
       const category = await categoryService.getCategoryById(
         Number(categoryId)
       );
